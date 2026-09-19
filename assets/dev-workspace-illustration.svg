@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" role="img" aria-labelledby="devIllustrationTitle">
+  <title id="devIllustrationTitle">3D-style illustration of a full stack developer working at a multi-monitor desk setup with HTML, CSS, JavaScript, React and Node.js code on screen</title>
+
+  <defs>
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="deskTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2d5c" />
+      <stop offset="100%" stop-color="#181a38" />
+    </linearGradient>
+    <linearGradient id="deskFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14152c" />
+      <stop offset="100%" stop-color="#0b0c1e" />
+    </linearGradient>
+
+    <linearGradient id="monitorBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#20233f" />
+      <stop offset="100%" stop-color="#12142a" />
+    </linearGradient>
+    <linearGradient id="screenBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0f24" />
+      <stop offset="100%" stop-color="#111431" />
+    </linearGradient>
+
+    <linearGradient id="hoodie" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c6bff" />
+      <stop offset="100%" stop-color="#3b5bfd" />
+    </linearGradient>
+    <radialGradient id="headGrad" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#e8b48f" />
+      <stop offset="100%" stop-color="#9a6a4d" />
+    </radialGradient>
+
+    <linearGradient id="chipFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+    </linearGradient>
+
+    <linearGradient id="ringEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+    <filter id="glowSmall" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="dropShadowSoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <style>
+    .float-a { animation: floatA 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .float-b { animation: floatB 5.1s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .float-c { animation: floatC 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .pulse-glow { animation: pulseGlow 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .cursor-blink { animation: cursorBlink 1.1s steps(2) infinite; }
+    .scan-line { animation: scan 5s linear infinite; }
+
+    @keyframes floatA { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes floatB { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+    @keyframes floatC { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes pulseGlow { 0%, 100% { opacity: 0.75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+    @keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes scan { 0% { transform: translateY(-40px); opacity: 0; } 10% { opacity: 0.5; } 90% { opacity: 0.5; } 100% { transform: translateY(220px); opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .float-a, .float-b, .float-c, .pulse-glow, .cursor-blink, .scan-line { animation: none; }
+    }
+  </style>
+
+  <!-- Ambient neon glow -->
+  <circle cx="180" cy="150" r="190" fill="url(#glowBlue)" filter="url(#softBlur)" class="pulse-glow" />
+  <circle cx="470" cy="380" r="210" fill="url(#glowPurple)" filter="url(#softBlur)" class="pulse-glow" style="animation-delay:-2s" />
+
+  <!-- Floor shadow -->
+  <ellipse cx="320" cy="565" rx="250" ry="22" fill="#000000" opacity="0.35" filter="url(#softBlur)" />
+
+  <!-- ===================== Monitors ===================== -->
+
+  <!-- Left monitor (HTML/CSS) -->
+  <g transform="rotate(-7 145 250)">
+    <rect x="55" y="185" width="180" height="128" rx="10" fill="url(#monitorBody)" stroke="#343764" stroke-width="1.5" />
+    <rect x="66" y="196" width="158" height="98" rx="6" fill="url(#screenBg)" />
+    <rect x="66" y="196" width="158" height="98" rx="6" fill="none" stroke="url(#ringEdge)" stroke-width="1.2" opacity="0.55" />
+    <rect x="140" y="313" width="10" height="18" fill="#2b2e54" />
+    <rect x="112" y="331" width="66" height="8" rx="4" fill="#1c1e3c" />
+
+    <text x="78" y="215" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#f472b6">&lt;div <tspan fill="#60a5fa">class</tspan>=<tspan fill="#4ade80">"app"</tspan>&gt;</text>
+    <text x="86" y="230" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#f472b6">&lt;h1&gt;<tspan fill="#e2e8f0">Hello</tspan>&lt;/h1&gt;</text>
+    <text x="78" y="245" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#f472b6">&lt;/div&gt;</text>
+    <text x="78" y="264" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#c084fc">.app {</text>
+    <text x="86" y="279" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#60a5fa">display<tspan fill="#e2e8f0">:</tspan> <tspan fill="#4ade80">flex</tspan>;</text>
+    <text x="78" y="294" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#c084fc">}</text>
+  </g>
+
+  <!-- Right monitor (Node.js) -->
+  <g transform="rotate(7 500 250)">
+    <rect x="410" y="185" width="180" height="128" rx="10" fill="url(#monitorBody)" stroke="#343764" stroke-width="1.5" />
+    <rect x="421" y="196" width="158" height="98" rx="6" fill="url(#screenBg)" />
+    <rect x="421" y="196" width="158" height="98" rx="6" fill="none" stroke="url(#ringEdge)" stroke-width="1.2" opacity="0.55" />
+    <rect x="495" y="313" width="10" height="18" fill="#2b2e54" />
+    <rect x="467" y="331" width="66" height="8" rx="4" fill="#1c1e3c" />
+
+    <text x="433" y="215" font-family="Menlo, Consolas, monospace" font-size="10" fill="#c084fc">const</text>
+    <text x="470" y="215" font-family="Menlo, Consolas, monospace" font-size="10" fill="#e2e8f0">app = </text>
+    <text x="433" y="230" font-family="Menlo, Consolas, monospace" font-size="10" fill="#60a5fa">require</text>
+    <text x="472" y="230" font-family="Menlo, Consolas, monospace" font-size="10" fill="#4ade80">('express')</text>
+    <text x="433" y="248" font-family="Menlo, Consolas, monospace" font-size="10" fill="#e2e8f0">app.</text>
+    <text x="452" y="248" font-family="Menlo, Consolas, monospace" font-size="10" fill="#60a5fa">get</text>
+    <text x="466" y="248" font-family="Menlo, Consolas, monospace" font-size="10" fill="#4ade80">('/api')</text>
+    <text x="433" y="266" font-family="Menlo, Consolas, monospace" font-size="10" fill="#e2e8f0">app.</text>
+    <text x="452" y="266" font-family="Menlo, Consolas, monospace" font-size="10" fill="#60a5fa">listen</text>
+    <text x="484" y="266" font-family="Menlo, Consolas, monospace" font-size="10" fill="#fbbf24">(3000)</text>
+
+    <polygon points="500,278 512,283 512,293 500,298 488,293 488,283" fill="none" stroke="#4ade80" stroke-width="1.6" />
+    <text x="500" y="291" font-family="Menlo, Consolas, monospace" font-size="8" fill="#4ade80" text-anchor="middle">JS</text>
+  </g>
+
+  <!-- Center monitor (React / main) -->
+  <g>
+    <rect x="205" y="120" width="230" height="160" rx="12" fill="url(#monitorBody)" stroke="#3b3f78" stroke-width="1.5" />
+    <rect x="205" y="120" width="230" height="160" rx="12" fill="none" stroke="url(#ringEdge)" stroke-width="1.4" opacity="0.7" filter="url(#glowSmall)" />
+    <rect x="218" y="132" width="204" height="122" rx="7" fill="url(#screenBg)" />
+    <clipPath id="screenClip"><rect x="218" y="132" width="204" height="122" rx="7" /></clipPath>
+    <rect x="230" y="270" width="10" height="22" fill="#2b2e54" />
+    <rect x="196" y="292" width="78" height="9" rx="4.5" fill="#1c1e3c" />
+
+    <g clip-path="url(#screenClip)">
+      <rect x="218" y="132" width="204" height="10" class="scan-line" fill="url(#ringEdge)" opacity="0.4" />
+
+      <text x="230" y="150" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#c084fc">import</text>
+      <text x="266" y="150" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#e2e8f0">React </text>
+      <text x="300" y="150" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#c084fc">from</text>
+      <text x="332" y="150" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#4ade80">'react'</text>
+
+      <text x="230" y="167" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#c084fc">function</text>
+      <text x="278" y="167" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#facc15">App</text>
+      <text x="297" y="167" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#e2e8f0">() {</text>
+
+      <text x="242" y="184" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#c084fc">return</text>
+      <text x="280" y="184" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#e2e8f0">(</text>
+
+      <text x="254" y="201" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#f472b6">&lt;Navbar</text>
+      <text x="308" y="201" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#f472b6"> /&gt;</text>
+
+      <text x="254" y="218" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#f472b6">&lt;Hero</text>
+      <text x="296" y="218" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#f472b6"> /&gt;</text>
+
+      <text x="242" y="235" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#e2e8f0">);</text>
+      <text x="230" y="252" font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#e2e8f0">}</text>
+
+      <rect x="255" y="240" width="7" height="12" fill="#60a5fa" class="cursor-blink" />
+    </g>
+
+    <g transform="translate(384,146)">
+      <g class="float-c">
+        <circle r="9" fill="none" stroke="#60a5fa" stroke-width="1.6" />
+        <ellipse rx="9" ry="3.4" fill="none" stroke="#60a5fa" stroke-width="1.3" />
+        <ellipse rx="9" ry="3.4" fill="none" stroke="#60a5fa" stroke-width="1.3" transform="rotate(60)" />
+        <ellipse rx="9" ry="3.4" fill="none" stroke="#60a5fa" stroke-width="1.3" transform="rotate(120)" />
+        <circle r="2" fill="#93c5fd" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ===================== Desk ===================== -->
+  <path d="M20,432 L620,432 L598,560 L42,560 Z" fill="url(#deskFront)" />
+  <rect x="20" y="418" width="600" height="26" rx="10" fill="url(#deskTop)" />
+  <rect x="20" y="418" width="600" height="4" rx="2" fill="url(#ringEdge)" opacity="0.85" filter="url(#glowSmall)" />
+
+  <!-- Keyboard -->
+  <g transform="translate(232,398)">
+    <rect width="176" height="34" rx="7" fill="#1b1d3a" stroke="#33366a" stroke-width="1" />
+    <g fill="#2c2f57">
+      <rect x="8" y="7" width="10" height="8" rx="2" /><rect x="22" y="7" width="10" height="8" rx="2" /><rect x="36" y="7" width="10" height="8" rx="2" /><rect x="50" y="7" width="10" height="8" rx="2" /><rect x="64" y="7" width="10" height="8" rx="2" /><rect x="78" y="7" width="10" height="8" rx="2" /><rect x="92" y="7" width="10" height="8" rx="2" /><rect x="106" y="7" width="10" height="8" rx="2" /><rect x="120" y="7" width="10" height="8" rx="2" /><rect x="134" y="7" width="10" height="8" rx="2" /><rect x="148" y="7" width="10" height="8" rx="2" />
+      <rect x="12" y="19" width="152" height="7" rx="2" />
+    </g>
+  </g>
+
+  <!-- Mouse -->
+  <g transform="translate(430,400)">
+    <rect width="22" height="32" rx="10" fill="#1f2142" stroke="#3a3d70" stroke-width="1" />
+    <rect x="9" y="4" width="2.5" height="12" fill="#60a5fa" opacity="0.8" />
+  </g>
+
+  <!-- Coffee mug -->
+  <g transform="translate(174,392)">
+    <path d="M0,10 h28 v20 a14,10 0 0 1 -28,0 z" fill="#2a2d5c" stroke="#454880" stroke-width="1" />
+    <path d="M28,14 q12,0 12,10 q0,10 -12,10" fill="none" stroke="#454880" stroke-width="3" />
+    <ellipse cx="14" cy="10" rx="14" ry="4" fill="#3a3d70" />
+  </g>
+
+  <!-- ===================== Seated figure ===================== -->
+  <g>
+    <!-- chair back, subtle -->
+    <rect x="255" y="255" width="130" height="150" rx="30" fill="#181a34" opacity="0.6" />
+
+    <!-- torso / hoodie -->
+    <path d="M245,430 C245,350 270,300 320,300 C370,300 395,350 395,430 Z" fill="url(#hoodie)" />
+    <path d="M245,430 C245,350 270,300 320,300 C370,300 395,350 395,430 Z" fill="#000000" opacity="0.08" />
+
+    <!-- neckline glow (collar) -->
+    <path d="M296,308 Q320,326 344,308" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.7" filter="url(#glowSmall)" />
+
+    <!-- arms to keyboard -->
+    <path d="M262,352 C246,372 240,392 250,410 L268,404 C262,388 268,370 280,356 Z" fill="url(#hoodie)" />
+    <path d="M378,352 C394,372 400,392 390,410 L372,404 C378,388 372,370 360,356 Z" fill="url(#hoodie)" />
+    <circle cx="252" cy="408" r="9" fill="#dba784" />
+    <circle cx="388" cy="408" r="9" fill="#dba784" />
+
+    <!-- head -->
+    <circle cx="320" cy="246" r="51" fill="#1c1330" />
+    <circle cx="320" cy="258" r="45" fill="url(#headGrad)" />
+
+    <!-- headset arc (futuristic touch) -->
+    <path d="M270,240 a50,44 0 0 1 100,0" fill="none" stroke="#0f1226" stroke-width="7" stroke-linecap="round" />
+    <circle cx="270" cy="244" r="8" fill="#12142a" />
+    <circle cx="370" cy="244" r="8" fill="#12142a" />
+    <circle cx="270" cy="244" r="3" fill="#60a5fa" class="pulse-glow" />
+    <circle cx="370" cy="244" r="3" fill="#a855f7" class="pulse-glow" style="animation-delay:-1.4s" />
+  </g>
+
+  <!-- ===================== Floating glass chips ===================== -->
+
+  <g transform="translate(40,90)">
+    <g class="float-a">
+      <rect width="86" height="34" rx="17" fill="url(#chipFill)" stroke="#ffffff" stroke-opacity="0.16" filter="url(#dropShadowSoft)" />
+      <text x="18" y="22" font-family="Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#fb923c">&lt;/&gt;</text>
+      <text x="42" y="22" font-family="Sora, sans-serif" font-size="11" fill="#e2e8f0">HTML</text>
+    </g>
+  </g>
+
+  <g transform="translate(500,70)">
+    <g class="float-b">
+      <rect width="92" height="34" rx="17" fill="url(#chipFill)" stroke="#ffffff" stroke-opacity="0.16" filter="url(#dropShadowSoft)" />
+      <text x="14" y="22" font-family="Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#60a5fa">{ }</text>
+      <text x="40" y="22" font-family="Sora, sans-serif" font-size="11" fill="#e2e8f0">CSS3</text>
+    </g>
+  </g>
+
+  <g transform="translate(30,320)">
+    <g class="float-c">
+      <rect width="88" height="34" rx="17" fill="url(#chipFill)" stroke="#ffffff" stroke-opacity="0.16" filter="url(#dropShadowSoft)" />
+      <text x="14" y="22" font-family="Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#facc15">JS</text>
+      <text x="38" y="22" font-family="Sora, sans-serif" font-size="11" fill="#e2e8f0">Logic</text>
+    </g>
+  </g>
+
+  <g transform="translate(516,340)">
+    <g class="float-a" style="animation-delay:-1.8s">
+      <rect width="98" height="34" rx="17" fill="url(#chipFill)" stroke="#ffffff" stroke-opacity="0.16" filter="url(#dropShadowSoft)" />
+      <circle cx="18" cy="17" r="8" fill="none" stroke="#4ade80" stroke-width="1.6" />
+      <text x="34" y="22" font-family="Sora, sans-serif" font-size="11" fill="#e2e8f0">Node.js</text>
+    </g>
+  </g>
+
+  <g transform="translate(258,60)">
+    <g class="float-b" style="animation-delay:-2.6s">
+      <rect width="108" height="34" rx="17" fill="url(#chipFill)" stroke="#ffffff" stroke-opacity="0.16" filter="url(#dropShadowSoft)" />
+      <text x="14" y="23" font-family="Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#61dafb">⚛</text>
+      <text x="34" y="22" font-family="Sora, sans-serif" font-size="11" fill="#e2e8f0">React</text>
+    </g>
+  </g>
+</svg>

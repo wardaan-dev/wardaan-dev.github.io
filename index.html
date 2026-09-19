@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Muhammad Wardaan | Full Stack Web Developer & AI Website Designer</title>
+  <meta name="description" content="Muhammad Wardaan is a Full Stack Web Developer & AI Website Designer specializing in business, e-commerce, portfolio and AI-powered websites with premium, modern UI/UX." />
+  <meta name="keywords" content="Muhammad Wardaan, Full Stack Developer, Web Developer Pakistan, AI Website Designer, React Developer, Next.js Developer, Portfolio" />
+  <meta name="author" content="Muhammad Wardaan" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muhammad Wardaan | Full Stack Web Developer & AI Website Designer" />
+  <meta property="og:description" content="Premium, modern websites built with clean code, stunning UI/UX and AI-powered design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='50' font-family='Arial,sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Preloader ===== -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <span class="preloader-logo">MW</span>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== Scroll Progress Bar ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== Custom Cursor (desktop only) ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="logo">
+        <span class="navbar-avatar-ring">
+          <img src="assets/muhammad-wardaan-avatar.png" alt="Muhammad Wardaan" class="navbar-avatar" width="46" height="46" loading="eager" />
+        </span>
+        M<span>.</span> Wardaan
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Mobile Menu Overlay ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-ripple btn-block mobile-hire-btn">
+      <i class="fa-solid fa-paper-plane"></i> Hire Me
+    </a>
+    <div class="mobile-social">
+      <a href="tel:+923313919271" aria-label="Call Wardaan"><i class="fa-solid fa-phone"></i></a>
+      <a href="mailto:wardaanarain7@gmail.com" aria-label="Email Wardaan"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/923313919271" target="_blank" rel="noopener" aria-label="WhatsApp Wardaan"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== Hero Section ===== -->
+    <section class="hero" id="home">
+      <canvas class="particles" id="particles"></canvas>
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+          <span class="eyebrow"><i class="fa-solid fa-hand-sparkles"></i> Hello, I'm</span>
+          <h1 class="hero-title">Muhammad Wardaan</h1>
+          <h2 class="hero-role">I'm a <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span></h2>
+          <p class="hero-desc">
+            I design and build fast, modern, responsive, and AI-powered websites with clean
+            code, stunning UI/UX, and high performance. I help businesses and startups build
+            beautiful digital experiences.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-ripple">
+              <i class="fa-solid fa-paper-plane"></i> Hire Me
+            </a>
+            <a href="assets/Muhammad-Wardaan-CV.pdf" download="Muhammad-Wardaan-CV.pdf" class="btn btn-glass btn-ripple">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline btn-ripple">
+              <i class="fa-solid fa-comment-dots"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <strong>50+</strong>
+              <span>Projects</span>
+            </div>
+            <div class="hero-meta-divider"></div>
+            <div class="hero-meta-item">
+              <strong>40+</strong>
+              <span>Clients</span>
+            </div>
+            <div class="hero-meta-divider"></div>
+            <div class="hero-meta-item">
+              <strong>2+</strong>
+              <span>Years Exp.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+          <div class="hero-image-wrap float-anim">
+            <div class="hero-illustration-glow" aria-hidden="true"></div>
+            <img
+              src="assets/dev-workspace-illustration.svg"
+              alt="3D illustration of a full stack developer working at a multi-monitor desk setup with HTML, CSS, JavaScript, React and Node.js code on screen"
+              loading="eager"
+              width="640" height="600"
+              class="hero-illustration"
+            />
+            <div class="hero-badge hero-badge-1 float-anim-slow">
+              <i class="fa-brands fa-react"></i>
+              <div><strong>React</strong><span>Expert Level</span></div>
+            </div>
+            <div class="hero-badge hero-badge-2 float-anim-slower">
+              <i class="fa-solid fa-code"></i>
+              <div><strong>Clean Code</strong><span>Best Practices</span></div>
+            </div>
+            <div class="hero-badge hero-badge-3 float-anim">
+              <i class="fa-solid fa-robot"></i>
+              <div><strong>AI Powered</strong><span>Smart Websites</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Turning Ideas Into Premium <span class="text-gradient">Digital Experiences</span></h2>
+          <p class="section-subtitle">A passionate developer obsessed with clean code, refined design and results that matter.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image" data-aos="fade-right">
+            <div class="about-image-frame">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80" alt="Developer workspace with clean code on screen" loading="lazy" width="500" height="600" />
+            </div>
+            <div class="about-exp-card glass">
+              <span class="exp-number">2+</span>
+              <span class="exp-label">Years of<br />Experience</span>
+            </div>
+          </div>
+
+          <div class="about-content" data-aos="fade-left">
+            <h3>Full Stack Web Developer &amp; AI Website Designer</h3>
+            <p>
+              I'm Muhammad Wardaan, a full stack web developer focused on crafting fast, elegant and
+              conversion-driven websites for businesses, brands and startups. I combine modern
+              frontend frameworks with solid backend engineering and a strong eye for UI/UX —
+              plus AI-assisted design workflows to build smarter websites, faster.
+            </p>
+            <p>
+              From bakery &amp; restaurant websites to full-scale e-commerce platforms and admin
+              dashboards, I deliver production-ready products that look premium and perform
+              flawlessly on every device.
+            </p>
+
+            <ul class="about-list">
+              <li><i class="fa-solid fa-circle-check"></i> Clean, semantic &amp; scalable code architecture</li>
+              <li><i class="fa-solid fa-circle-check"></i> Pixel-perfect, fully responsive UI/UX design</li>
+              <li><i class="fa-solid fa-circle-check"></i> AI-powered website design &amp; automation</li>
+              <li><i class="fa-solid fa-circle-check"></i> On-time delivery with clear communication</li>
+            </ul>
+
+            <div class="about-info-grid">
+              <div class="about-info-item">
+                <span>Name</span>
+                <strong>Muhammad Wardaan</strong>
+              </div>
+              <div class="about-info-item">
+                <span>Email</span>
+                <strong>wardaanarain7@gmail.com</strong>
+              </div>
+              <div class="about-info-item">
+                <span>Phone</span>
+                <strong>+92 331 3919271</strong>
+              </div>
+              <div class="about-info-item">
+                <span>Availability</span>
+                <strong>Open to Projects</strong>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary btn-ripple">
+              <i class="fa-solid fa-message"></i> Let's Talk
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services Section ===== -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-tag">What I Offer</span>
+          <h2 class="section-title">Premium Services Built For <span class="text-gradient">Real Results</span></h2>
+          <p class="section-subtitle">End-to-end web solutions — from concept and design to development and ongoing support.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>Business Website</h3>
+            <p>Professional, conversion-focused websites that represent your brand with authority.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="50">
+            <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h3>Portfolio Website</h3>
+            <p>Elegant personal &amp; creative portfolios that showcase your work beautifully.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+            <h3>Bakery Website</h3>
+            <p>Delicious, appetite-triggering designs with menus, ordering &amp; gallery sections.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="150">
+            <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>School Website</h3>
+            <p>Clean, informative education platforms for schools, academies &amp; institutes.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3>E-Commerce Website</h3>
+            <p>Full-featured online stores with secure checkout, cart &amp; product management.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="250">
+            <div class="service-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Landing Page</h3>
+            <p>High-converting single-page designs built to capture leads and drive sales.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Dashboard UI</h3>
+            <p>Data-rich, intuitive dashboards with charts, tables &amp; real-time interactions.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="50">
+            <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Admin Panel</h3>
+            <p>Secure, scalable admin systems to manage content, users &amp; data with ease.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon"><i class="fa-solid fa-paintbrush"></i></div>
+            <h3>Website Redesign</h3>
+            <p>Modernize your outdated website into a premium, high-performing experience.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="150">
+            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Website Maintenance</h3>
+            <p>Ongoing updates, backups, security checks &amp; performance monitoring.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon"><i class="fa-solid fa-bug"></i></div>
+            <h3>Bug Fixing</h3>
+            <p>Fast, reliable debugging to keep your website running smoothly at all times.</p>
+          </div>
+          <div class="service-card glass" data-aos="fade-up" data-aos-delay="250">
+            <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI Website Development</h3>
+            <p>Smart, AI-integrated websites with chatbots, automation &amp; intelligent UX.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-tag">My Expertise</span>
+          <h2 class="section-title">Skills &amp; <span class="text-gradient">Technologies</span></h2>
+          <p class="section-subtitle">A modern, full stack toolkit refined through real-world projects.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-col" data-aos="fade-right">
+            <h3 class="skills-col-title"><i class="fa-solid fa-palette"></i> Frontend &amp; Design</h3>
+
+            <div class="skill-item">
+              <div class="skill-top"><span>HTML5</span><span class="skill-percent">98%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="98"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>CSS3</span><span class="skill-percent">96%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="96"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>JavaScript</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>React</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>Next.js</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>Tailwind CSS</span><span class="skill-percent">94%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="94"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>Bootstrap</span><span class="skill-percent">93%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="93"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>Responsive Design</span><span class="skill-percent">97%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="97"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>UI/UX Design</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+          </div>
+
+          <div class="skills-col" data-aos="fade-left">
+            <h3 class="skills-col-title"><i class="fa-solid fa-server"></i> Backend &amp; Tools</h3>
+
+            <div class="skill-item">
+              <div class="skill-top"><span>Node.js</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>Express.js</span><span class="skill-percent">86%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="86"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>PHP</span><span class="skill-percent">82%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>MySQL</span><span class="skill-percent">87%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="87"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>MongoDB</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>Firebase</span><span class="skill-percent">84%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="84"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>Git &amp; GitHub</span><span class="skill-percent">95%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>REST API</span><span class="skill-percent">91%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="91"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio Section ===== -->
+    <section class="section section-alt" id="portfolio">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-tag">My Work</span>
+          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-subtitle">A selection of premium websites crafted with care, precision and modern technology.</p>
+        </div>
+
+        <div class="portfolio-filter" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="business">Business</button>
+          <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+          <button class="filter-btn" data-filter="creative">Creative</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Dashboard</button>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <article class="project-card glass" data-category="business" data-aos="zoom-in" data-aos-delay="0">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Business website project with professional corporate design" loading="lazy" width="500" height="350" />
+              <div class="project-overlay">
+                <a href="projects/business-website.html" target="_blank" rel="noopener" class="project-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Business%20Website&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Business%20Website%22%20project.%0A%0AThanks!" class="project-btn" aria-label="Request Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Business</span>
+              <h3>Business Website</h3>
+              <p>A sleek, conversion-focused business website built to establish authority and generate leads.</p>
+              <div class="project-tech">
+                <span>HTML5</span><span>CSS3</span><span>Bootstrap</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/business-website.html" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Business%20Website&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Business%20Website%22%20project.%0A%0AThanks!">Source Code <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass" data-category="creative" data-aos="zoom-in" data-aos-delay="100">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" alt="Personal portfolio website project for a creative professional" loading="lazy" width="500" height="350" />
+              <div class="project-overlay">
+                <a href="projects/personal-portfolio.html" target="_blank" rel="noopener" class="project-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Personal%20Portfolio&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Personal%20Portfolio%22%20project.%0A%0AThanks!" class="project-btn" aria-label="Request Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Portfolio</span>
+              <h3>Personal Portfolio</h3>
+              <p>A minimal, elegant personal portfolio designed to showcase skills, projects and experience beautifully.</p>
+              <div class="project-tech">
+                <span>React</span><span>Next.js</span><span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/personal-portfolio.html" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Personal%20Portfolio&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Personal%20Portfolio%22%20project.%0A%0AThanks!">Source Code <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass" data-category="business" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant website project with elegant dining theme" loading="lazy" width="500" height="350" />
+              <div class="project-overlay">
+                <a href="projects/restaurant.html" target="_blank" rel="noopener" class="project-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20La%20Table%20Restaurant&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22La%20Table%20Restaurant%22%20project.%0A%0AThanks!" class="project-btn" aria-label="Request Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Business</span>
+              <h3>La Table Restaurant</h3>
+              <p>An elegant restaurant website with menu showcase, reservations and gallery.</p>
+              <div class="project-tech">
+                <span>Next.js</span><span>Tailwind</span><span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/restaurant.html" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20La%20Table%20Restaurant&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22La%20Table%20Restaurant%22%20project.%0A%0AThanks!">Source Code <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass" data-category="business" data-aos="zoom-in" data-aos-delay="300">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Corporate business website project" loading="lazy" width="500" height="350" />
+              <div class="project-overlay">
+                <a href="projects/business.html" target="_blank" rel="noopener" class="project-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Corevate%20Business%20Hub&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Corevate%20Business%20Hub%22%20project.%0A%0AThanks!" class="project-btn" aria-label="Request Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Business</span>
+              <h3>Corevate Business Hub</h3>
+              <p>A corporate business website built for authority, trust and lead generation.</p>
+              <div class="project-tech">
+                <span>React</span><span>Node.js</span><span>MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/business.html" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Corevate%20Business%20Hub&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Corevate%20Business%20Hub%22%20project.%0A%0AThanks!">Source Code <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass" data-category="creative" data-aos="zoom-in" data-aos-delay="0">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80" alt="Creative portfolio website design project" loading="lazy" width="500" height="350" />
+              <div class="project-overlay">
+                <a href="projects/creative-portfolio.html" target="_blank" rel="noopener" class="project-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Aura%20Creative%20Portfolio&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Aura%20Creative%20Portfolio%22%20project.%0A%0AThanks!" class="project-btn" aria-label="Request Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Creative</span>
+              <h3>Aura Creative Portfolio</h3>
+              <p>A stunning personal portfolio with glassmorphism UI and smooth animations.</p>
+              <div class="project-tech">
+                <span>HTML5</span><span>CSS3</span><span>GSAP</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/creative-portfolio.html" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Aura%20Creative%20Portfolio&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Aura%20Creative%20Portfolio%22%20project.%0A%0AThanks!">Source Code <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass" data-category="ecommerce" data-aos="zoom-in" data-aos-delay="100">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce website project with online store" loading="lazy" width="500" height="350" />
+              <div class="project-overlay">
+                <a href="projects/ecommerce.html" target="_blank" rel="noopener" class="project-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Luxe%20Shop%20E-Commerce&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Luxe%20Shop%20E-Commerce%22%20project.%0A%0AThanks!" class="project-btn" aria-label="Request Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">E-Commerce</span>
+              <h3>Luxe Shop E-Commerce</h3>
+              <p>A full-featured online store with cart, checkout and secure payment integration.</p>
+              <div class="project-tech">
+                <span>Next.js</span><span>Stripe</span><span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/ecommerce.html" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Luxe%20Shop%20E-Commerce&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Luxe%20Shop%20E-Commerce%22%20project.%0A%0AThanks!">Source Code <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass" data-category="ai" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Analytics dashboard UI design project" loading="lazy" width="500" height="350" />
+              <div class="project-overlay">
+                <a href="projects/dashboard.html" target="_blank" rel="noopener" class="project-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Insight%20Admin%20Dashboard&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Insight%20Admin%20Dashboard%22%20project.%0A%0AThanks!" class="project-btn" aria-label="Request Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Dashboard</span>
+              <h3>Insight Admin Dashboard</h3>
+              <p>A data-rich analytics dashboard with real-time charts and role-based access.</p>
+              <div class="project-tech">
+                <span>React</span><span>Express.js</span><span>Chart.js</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/dashboard.html" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20Insight%20Admin%20Dashboard&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22Insight%20Admin%20Dashboard%22%20project.%0A%0AThanks!">Source Code <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass" data-category="ai" data-aos="zoom-in" data-aos-delay="300">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="AI powered website project with smart automation" loading="lazy" width="500" height="350" />
+              <div class="project-overlay">
+                <a href="projects/ai-project.html" target="_blank" rel="noopener" class="project-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20NeuraChat%20AI%20Assistant&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22NeuraChat%20AI%20Assistant%22%20project.%0A%0AThanks!" class="project-btn" aria-label="Request Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">AI Project</span>
+              <h3>NeuraChat AI Assistant</h3>
+              <p>An AI-powered website with an intelligent chatbot and automated workflows.</p>
+              <div class="project-tech">
+                <span>Next.js</span><span>OpenAI API</span><span>Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/ai-project.html" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com?subject=Source%20Code%20Request%20-%20NeuraChat%20AI%20Assistant&amp;body=Hi%20Wardaan%2C%0A%0AI%27d%20like%20to%20request%20the%20source%20code%20for%20the%20%22NeuraChat%20AI%20Assistant%22%20project.%0A%0AThanks!">Source Code <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Stats Section ===== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <i class="fa-solid fa-face-smile"></i>
+            <span class="stat-number" data-count="40">0</span><span class="stat-plus">+</span>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="fa-solid fa-heart"></i>
+            <span class="stat-number" data-count="100">0</span><span class="stat-plus">%</span>
+            <p>Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials Section ===== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">What Clients <span class="text-gradient">Say About Me</span></h2>
+          <p class="section-subtitle">Real feedback from clients I've had the pleasure of working with.</p>
+        </div>
+
+        <div class="testimonial-track-wrap" data-aos="fade-up">
+          <div class="testimonial-track" id="testimonialTrack">
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>"Wardaan delivered a stunning bakery website ahead of schedule. The design feels premium and our online orders have grown noticeably."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Sarah Malik" loading="lazy" width="56" height="56" />
+                <div><strong>Sarah Malik</strong><span>Owner, Sweet Delight Bakery</span></div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>"Extremely professional and detail-oriented. Our school website is fast, modern, and parents love how easy it is to navigate."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Imran Sheikh" loading="lazy" width="56" height="56" />
+                <div><strong>Imran Sheikh</strong><span>Principal, Bright Future School</span></div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>"The e-commerce store Wardaan built runs flawlessly. Beautiful UI, fast checkout, and great communication throughout the project."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Hassan Raza" loading="lazy" width="56" height="56" />
+                <div><strong>Hassan Raza</strong><span>Founder, Luxe Shop</span></div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>"Working with Wardaan was a pleasure. He understood our brand instantly and delivered a dashboard that our whole team loves using."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Ayesha Khan" loading="lazy" width="56" height="56" />
+                <div><strong>Ayesha Khan</strong><span>Product Manager, Insight</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="testimonial-dots" id="testimonialDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something <span class="text-gradient">Amazing Together</span></h2>
+          <p class="section-subtitle">Have a project in mind? Send a message and let's bring it to life.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-info-card glass">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span>Call Me</span>
+                <a href="tel:+923313919271">+92 331 3919271</a>
+              </div>
+            </div>
+            <div class="contact-info-card glass">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span>Email Me</span>
+                <a href="mailto:wardaanarain7@gmail.com">wardaanarain7@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-info-card glass">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span>Location</span>
+                <a href="#contact">Pakistan (Remote Worldwide)</a>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <span>Reach Me Instantly</span>
+              <div class="social-icons">
+                <a href="tel:+923313919271" aria-label="Call Wardaan"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:wardaanarain7@gmail.com" aria-label="Email Wardaan"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://wa.me/923313919271" target="_blank" rel="noopener" aria-label="WhatsApp Wardaan"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form glass" id="contactForm" data-aos="fade-left" action="https://formsubmit.co/wardaanarain7@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from Portfolio Website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-ripple btn-block">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a href="#home" class="logo">M<span>.</span> Wardaan</a>
+        <p>Full Stack Web Developer &amp; AI Website Designer crafting premium, modern websites that help brands grow.</p>
+        <div class="social-icons">
+          <a href="tel:+923313919271" aria-label="Call Wardaan"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:wardaanarain7@gmail.com" aria-label="Email Wardaan"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/923313919271" target="_blank" rel="noopener" aria-label="WhatsApp Wardaan"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="#services">Business Website</a>
+        <a href="#services">E-Commerce Website</a>
+        <a href="#services">Dashboard UI</a>
+        <a href="#services">AI Website Development</a>
+        <a href="#services">Website Maintenance</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p><i class="fa-solid fa-phone"></i> +92 331 3919271</p>
+        <p><i class="fa-solid fa-envelope"></i> wardaanarain7@gmail.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Pakistan (Remote Worldwide)</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Muhammad Wardaan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Scroll To Top ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
